@@ -1,9 +1,179 @@
 
+_Tone1:
+
+;main.c,10 :: 		void Tone1() {
+;main.c,11 :: 		Sound_Play(659, 250);   // Frequency = 659Hz, duration = 250ms
+	MOVLW       147
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       2
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,12 :: 		}
+L_end_Tone1:
+	RETURN      0
+; end of _Tone1
+
+_Tone2:
+
+;main.c,14 :: 		void Tone2() {
+;main.c,15 :: 		Sound_Play(698, 250);   // Frequency = 698Hz, duration = 250ms
+	MOVLW       186
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       2
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,16 :: 		}
+L_end_Tone2:
+	RETURN      0
+; end of _Tone2
+
+_Tone3:
+
+;main.c,18 :: 		void Tone3() {
+;main.c,19 :: 		Sound_Play(784, 250);   // Frequency = 784Hz, duration = 250ms
+	MOVLW       16
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       3
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,20 :: 		}
+L_end_Tone3:
+	RETURN      0
+; end of _Tone3
+
+_Melody:
+
+;main.c,22 :: 		void Melody() {           // Plays the melody "Yellow house"
+;main.c,23 :: 		Tone1(); Tone2(); Tone3(); Tone3();
+	CALL        _Tone1+0, 0
+	CALL        _Tone2+0, 0
+	CALL        _Tone3+0, 0
+	CALL        _Tone3+0, 0
+;main.c,24 :: 		Tone1(); Tone2(); Tone3(); Tone3();
+	CALL        _Tone1+0, 0
+	CALL        _Tone2+0, 0
+	CALL        _Tone3+0, 0
+	CALL        _Tone3+0, 0
+;main.c,25 :: 		Tone1(); Tone2(); Tone3();
+	CALL        _Tone1+0, 0
+	CALL        _Tone2+0, 0
+	CALL        _Tone3+0, 0
+;main.c,26 :: 		Tone1(); Tone2(); Tone3(); Tone3();
+	CALL        _Tone1+0, 0
+	CALL        _Tone2+0, 0
+	CALL        _Tone3+0, 0
+	CALL        _Tone3+0, 0
+;main.c,27 :: 		Tone1(); Tone2(); Tone3();
+	CALL        _Tone1+0, 0
+	CALL        _Tone2+0, 0
+	CALL        _Tone3+0, 0
+;main.c,28 :: 		Tone3(); Tone3(); Tone2(); Tone2(); Tone1();
+	CALL        _Tone3+0, 0
+	CALL        _Tone3+0, 0
+	CALL        _Tone2+0, 0
+	CALL        _Tone2+0, 0
+	CALL        _Tone1+0, 0
+;main.c,29 :: 		}
+L_end_Melody:
+	RETURN      0
+; end of _Melody
+
+_ToneA:
+
+;main.c,31 :: 		void ToneA() {
+;main.c,32 :: 		Sound_Play( 880, 50);
+	MOVLW       112
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       3
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       50
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,33 :: 		}
+L_end_ToneA:
+	RETURN      0
+; end of _ToneA
+
+_ToneC:
+
+;main.c,34 :: 		void ToneC() {
+;main.c,35 :: 		Sound_Play(1046, 50);
+	MOVLW       22
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       4
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       50
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,36 :: 		}
+L_end_ToneC:
+	RETURN      0
+; end of _ToneC
+
+_ToneE:
+
+;main.c,37 :: 		void ToneE() {
+;main.c,38 :: 		Sound_Play(1318, 50);
+	MOVLW       38
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       5
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       50
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,39 :: 		}
+L_end_ToneE:
+	RETURN      0
+; end of _ToneE
+
+_Melody2:
+
+;main.c,41 :: 		void Melody2() {
+;main.c,43 :: 		for (i = 9; i > 0; i--) {
+	MOVLW       9
+	MOVWF       Melody2_i_L0+0 
+L_Melody20:
+	MOVF        Melody2_i_L0+0, 0 
+	SUBLW       0
+	BTFSC       STATUS+0, 0 
+	GOTO        L_Melody21
+;main.c,44 :: 		ToneA(); ToneC(); ToneE();
+	CALL        _ToneA+0, 0
+	CALL        _ToneC+0, 0
+	CALL        _ToneE+0, 0
+;main.c,43 :: 		for (i = 9; i > 0; i--) {
+	DECF        Melody2_i_L0+0, 1 
+;main.c,45 :: 		}
+	GOTO        L_Melody20
+L_Melody21:
+;main.c,46 :: 		}
+L_end_Melody2:
+	RETURN      0
+; end of _Melody2
+
 _wait:
 
-;main.c,9 :: 		void wait(unsigned int time){
-;main.c,10 :: 		while(time--)
-L_wait0:
+;main.c,48 :: 		void wait(unsigned int time){
+;main.c,49 :: 		while(time--)
+L_wait3:
 	MOVF        FARG_wait_time+0, 0 
 	MOVWF       R0 
 	MOVF        FARG_wait_time+1, 0 
@@ -15,194 +185,24 @@ L_wait0:
 	MOVF        R0, 0 
 	IORWF       R1, 0 
 	BTFSC       STATUS+0, 2 
-	GOTO        L_wait1
-;main.c,11 :: 		delay_ms(1);
+	GOTO        L_wait4
+;main.c,50 :: 		delay_ms(1);
 	MOVLW       16
 	MOVWF       R12, 0
 	MOVLW       148
 	MOVWF       R13, 0
-L_wait2:
+L_wait5:
 	DECFSZ      R13, 1, 1
-	BRA         L_wait2
+	BRA         L_wait5
 	DECFSZ      R12, 1, 1
-	BRA         L_wait2
+	BRA         L_wait5
 	NOP
-	GOTO        L_wait0
-L_wait1:
-;main.c,12 :: 		}
+	GOTO        L_wait3
+L_wait4:
+;main.c,51 :: 		}
 L_end_wait:
 	RETURN      0
 ; end of _wait
-
-_Tone1:
-
-;main.c,14 :: 		void Tone1() {
-;main.c,15 :: 		Sound_Play(659, 250);   // Frequency = 659Hz, duration = 250ms
-	MOVLW       147
-	MOVWF       FARG_Sound_Play_freq_in_hz+0 
-	MOVLW       2
-	MOVWF       FARG_Sound_Play_freq_in_hz+1 
-	MOVLW       250
-	MOVWF       FARG_Sound_Play_duration_ms+0 
-	MOVLW       0
-	MOVWF       FARG_Sound_Play_duration_ms+1 
-	CALL        _Sound_Play+0, 0
-;main.c,16 :: 		}
-L_end_Tone1:
-	RETURN      0
-; end of _Tone1
-
-_Tone2:
-
-;main.c,18 :: 		void Tone2() {
-;main.c,19 :: 		Sound_Play(698, 250);   // Frequency = 698Hz, duration = 250ms
-	MOVLW       186
-	MOVWF       FARG_Sound_Play_freq_in_hz+0 
-	MOVLW       2
-	MOVWF       FARG_Sound_Play_freq_in_hz+1 
-	MOVLW       250
-	MOVWF       FARG_Sound_Play_duration_ms+0 
-	MOVLW       0
-	MOVWF       FARG_Sound_Play_duration_ms+1 
-	CALL        _Sound_Play+0, 0
-;main.c,20 :: 		}
-L_end_Tone2:
-	RETURN      0
-; end of _Tone2
-
-_Tone3:
-
-;main.c,22 :: 		void Tone3() {
-;main.c,23 :: 		Sound_Play(784, 250);   // Frequency = 784Hz, duration = 250ms
-	MOVLW       16
-	MOVWF       FARG_Sound_Play_freq_in_hz+0 
-	MOVLW       3
-	MOVWF       FARG_Sound_Play_freq_in_hz+1 
-	MOVLW       250
-	MOVWF       FARG_Sound_Play_duration_ms+0 
-	MOVLW       0
-	MOVWF       FARG_Sound_Play_duration_ms+1 
-	CALL        _Sound_Play+0, 0
-;main.c,24 :: 		}
-L_end_Tone3:
-	RETURN      0
-; end of _Tone3
-
-_Melody:
-
-;main.c,26 :: 		void Melody() {           // Plays the melody "Yellow house"
-;main.c,27 :: 		Tone1(); Tone2(); Tone3(); Tone3();
-	CALL        _Tone1+0, 0
-	CALL        _Tone2+0, 0
-	CALL        _Tone3+0, 0
-	CALL        _Tone3+0, 0
-;main.c,28 :: 		Tone1(); Tone2(); Tone3(); Tone3();
-	CALL        _Tone1+0, 0
-	CALL        _Tone2+0, 0
-	CALL        _Tone3+0, 0
-	CALL        _Tone3+0, 0
-;main.c,29 :: 		Tone1(); Tone2(); Tone3();
-	CALL        _Tone1+0, 0
-	CALL        _Tone2+0, 0
-	CALL        _Tone3+0, 0
-;main.c,30 :: 		Tone1(); Tone2(); Tone3(); Tone3();
-	CALL        _Tone1+0, 0
-	CALL        _Tone2+0, 0
-	CALL        _Tone3+0, 0
-	CALL        _Tone3+0, 0
-;main.c,31 :: 		Tone1(); Tone2(); Tone3();
-	CALL        _Tone1+0, 0
-	CALL        _Tone2+0, 0
-	CALL        _Tone3+0, 0
-;main.c,32 :: 		Tone3(); Tone3(); Tone2(); Tone2(); Tone1();
-	CALL        _Tone3+0, 0
-	CALL        _Tone3+0, 0
-	CALL        _Tone2+0, 0
-	CALL        _Tone2+0, 0
-	CALL        _Tone1+0, 0
-;main.c,33 :: 		}
-L_end_Melody:
-	RETURN      0
-; end of _Melody
-
-_ToneA:
-
-;main.c,35 :: 		void ToneA() {
-;main.c,36 :: 		Sound_Play( 880, 50);
-	MOVLW       112
-	MOVWF       FARG_Sound_Play_freq_in_hz+0 
-	MOVLW       3
-	MOVWF       FARG_Sound_Play_freq_in_hz+1 
-	MOVLW       50
-	MOVWF       FARG_Sound_Play_duration_ms+0 
-	MOVLW       0
-	MOVWF       FARG_Sound_Play_duration_ms+1 
-	CALL        _Sound_Play+0, 0
-;main.c,37 :: 		}
-L_end_ToneA:
-	RETURN      0
-; end of _ToneA
-
-_ToneC:
-
-;main.c,38 :: 		void ToneC() {
-;main.c,39 :: 		Sound_Play(1046, 50);
-	MOVLW       22
-	MOVWF       FARG_Sound_Play_freq_in_hz+0 
-	MOVLW       4
-	MOVWF       FARG_Sound_Play_freq_in_hz+1 
-	MOVLW       50
-	MOVWF       FARG_Sound_Play_duration_ms+0 
-	MOVLW       0
-	MOVWF       FARG_Sound_Play_duration_ms+1 
-	CALL        _Sound_Play+0, 0
-;main.c,40 :: 		}
-L_end_ToneC:
-	RETURN      0
-; end of _ToneC
-
-_ToneE:
-
-;main.c,41 :: 		void ToneE() {
-;main.c,42 :: 		Sound_Play(1318, 50);
-	MOVLW       38
-	MOVWF       FARG_Sound_Play_freq_in_hz+0 
-	MOVLW       5
-	MOVWF       FARG_Sound_Play_freq_in_hz+1 
-	MOVLW       50
-	MOVWF       FARG_Sound_Play_duration_ms+0 
-	MOVLW       0
-	MOVWF       FARG_Sound_Play_duration_ms+1 
-	CALL        _Sound_Play+0, 0
-;main.c,43 :: 		}
-L_end_ToneE:
-	RETURN      0
-; end of _ToneE
-
-_Melody2:
-
-;main.c,45 :: 		void Melody2() {
-;main.c,47 :: 		for (i = 9; i > 0; i--) {
-	MOVLW       9
-	MOVWF       Melody2_i_L0+0 
-L_Melody23:
-	MOVF        Melody2_i_L0+0, 0 
-	SUBLW       0
-	BTFSC       STATUS+0, 0 
-	GOTO        L_Melody24
-;main.c,48 :: 		ToneA(); ToneC(); ToneE();
-	CALL        _ToneA+0, 0
-	CALL        _ToneC+0, 0
-	CALL        _ToneE+0, 0
-;main.c,47 :: 		for (i = 9; i > 0; i--) {
-	DECF        Melody2_i_L0+0, 1 
-;main.c,49 :: 		}
-	GOTO        L_Melody23
-L_Melody24:
-;main.c,50 :: 		}
-L_end_Melody2:
-	RETURN      0
-; end of _Melody2
 
 _main:
 
@@ -230,8 +230,8 @@ _main:
 	MOVWF       FARG_Sound_Init_snd_port+1 
 	CLRF        FARG_Sound_Init_snd_pin+0 
 	CALL        _Sound_Init+0, 0
-;main.c,65 :: 		Sound_Play(880, 1000);             // Play sound at 880Hz for 1 second
-	MOVLW       112
+;main.c,65 :: 		Sound_Play(800, 1000);
+	MOVLW       32
 	MOVWF       FARG_Sound_Play_freq_in_hz+0 
 	MOVLW       3
 	MOVWF       FARG_Sound_Play_freq_in_hz+1 
@@ -247,53 +247,127 @@ L_main6:
 ;main.c,69 :: 		if(!BUTTON){
 	BTFSC       RB0_bit+0, BitPos(RB0_bit+0) 
 	GOTO        L_main8
-;main.c,71 :: 		switch(i){
+;main.c,70 :: 		switch(i){
 	GOTO        L_main9
-;main.c,72 :: 		case 0: Tone1(); break;
+;main.c,71 :: 		case 0: Tone1();   break;
 L_main11:
 	CALL        _Tone1+0, 0
 	GOTO        L_main10
-;main.c,73 :: 		case 1: Tone2(); break;
+;main.c,72 :: 		case 1: Tone2();   break;
 L_main12:
 	CALL        _Tone2+0, 0
 	GOTO        L_main10
-;main.c,74 :: 		case 2: Tone3(); break;
+;main.c,73 :: 		case 2: Tone3();   break;
 L_main13:
 	CALL        _Tone3+0, 0
 	GOTO        L_main10
-;main.c,75 :: 		case 3: Melody(); break;
+;main.c,74 :: 		case 3: Melody();  break;
 L_main14:
 	CALL        _Melody+0, 0
 	GOTO        L_main10
-;main.c,76 :: 		case 4: ToneA(); break;
+;main.c,75 :: 		case 4: ToneA();   break;
 L_main15:
 	CALL        _ToneA+0, 0
 	GOTO        L_main10
-;main.c,77 :: 		case 5: ToneC(); break;
+;main.c,76 :: 		case 5: ToneC();   break;
 L_main16:
 	CALL        _ToneC+0, 0
 	GOTO        L_main10
-;main.c,78 :: 		case 6: ToneE(); break;
+;main.c,77 :: 		case 6: ToneE();   break;
 L_main17:
 	CALL        _ToneE+0, 0
 	GOTO        L_main10
-;main.c,79 :: 		case 7: Melody2(); break;
+;main.c,78 :: 		case 7: Melody2(); break;
 L_main18:
 	CALL        _Melody2+0, 0
 	GOTO        L_main10
-;main.c,80 :: 		default: Sound_Play(100, 1000);  break;
+;main.c,79 :: 		default:
 L_main19:
-	MOVLW       100
+;main.c,80 :: 		i=0;
+	CLRF        _i+0 
+;main.c,81 :: 		Sound_Play(800, 250);
+	MOVLW       32
 	MOVWF       FARG_Sound_Play_freq_in_hz+0 
-	MOVLW       0
-	MOVWF       FARG_Sound_Play_freq_in_hz+1 
-	MOVLW       232
-	MOVWF       FARG_Sound_Play_duration_ms+0 
 	MOVLW       3
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
 	MOVWF       FARG_Sound_Play_duration_ms+1 
 	CALL        _Sound_Play+0, 0
+;main.c,82 :: 		Sound_Play(400, 250);
+	MOVLW       144
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       1
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,83 :: 		Sound_Play(800, 250);
+	MOVLW       32
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       3
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,84 :: 		Sound_Play(400, 250);
+	MOVLW       144
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       1
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,85 :: 		Sound_Play(800, 250);
+	MOVLW       32
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       3
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,86 :: 		Sound_Play(400, 250);
+	MOVLW       144
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       1
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,87 :: 		Sound_Play(800, 250);
+	MOVLW       32
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       3
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,88 :: 		Sound_Play(400, 250);
+	MOVLW       144
+	MOVWF       FARG_Sound_Play_freq_in_hz+0 
+	MOVLW       1
+	MOVWF       FARG_Sound_Play_freq_in_hz+1 
+	MOVLW       250
+	MOVWF       FARG_Sound_Play_duration_ms+0 
+	MOVLW       0
+	MOVWF       FARG_Sound_Play_duration_ms+1 
+	CALL        _Sound_Play+0, 0
+;main.c,89 :: 		break;
 	GOTO        L_main10
-;main.c,81 :: 		}
+;main.c,90 :: 		}
 L_main9:
 	MOVF        _i+0, 0 
 	XORLW       0
@@ -329,34 +403,25 @@ L_main9:
 	GOTO        L_main18
 	GOTO        L_main19
 L_main10:
-;main.c,83 :: 		if(i<7) i++;
-	MOVLW       7
-	SUBWF       _i+0, 0 
-	BTFSC       STATUS+0, 0 
-	GOTO        L_main20
+;main.c,91 :: 		i++;
 	INCF        _i+0, 1 
-	GOTO        L_main21
-L_main20:
-;main.c,84 :: 		else i=0;
-	CLRF        _i+0 
-L_main21:
-;main.c,85 :: 		wait(100);
+;main.c,92 :: 		wait(100);
 	MOVLW       100
 	MOVWF       FARG_wait_time+0 
 	MOVLW       0
 	MOVWF       FARG_wait_time+1 
 	CALL        _wait+0, 0
-;main.c,86 :: 		while(!BUTTON);
-L_main22:
+;main.c,93 :: 		while(!BUTTON);
+L_main20:
 	BTFSC       RB0_bit+0, BitPos(RB0_bit+0) 
-	GOTO        L_main23
-	GOTO        L_main22
-L_main23:
-;main.c,87 :: 		}
+	GOTO        L_main21
+	GOTO        L_main20
+L_main21:
+;main.c,94 :: 		}
 L_main8:
-;main.c,88 :: 		}
+;main.c,95 :: 		}
 	GOTO        L_main6
-;main.c,89 :: 		}
+;main.c,96 :: 		}
 L_end_main:
 	GOTO        $+0
 ; end of _main

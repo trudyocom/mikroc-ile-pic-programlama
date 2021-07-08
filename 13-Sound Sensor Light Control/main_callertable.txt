@@ -1,0 +1,7 @@
+main
+	ADC_Init
+	ADC_Read
+		Delay_22us
+	wait
+	InitTimer0
+Interrupt

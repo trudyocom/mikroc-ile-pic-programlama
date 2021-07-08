@@ -1,15 +1,11 @@
 // Connections
 sbit LED at LATA4_bit;
-sbit BUZZER at LATD0_bit;
+
 sbit BUTTON at RB0_bit;
+sbit BUUZER at LATD0_bit;
 
 // Global Variables
 unsigned short i,j;
-
-void wait(unsigned int time){
-  while(time--)
-    delay_ms(1);
-}
 
 void Tone1() {
   Sound_Play(659, 250);   // Frequency = 659Hz, duration = 250ms
@@ -49,6 +45,10 @@ void Melody2() {
   }
 }
 
+void wait(unsigned int time){
+  while(time--)
+    delay_ms(1);
+}
 
 void main() {
   TRISA=0b00000000; // [][][][LED][][][][]
@@ -62,26 +62,33 @@ void main() {
   ADCON1=0xFF;
 
   Sound_Init(&PORTD, 0);
-  Sound_Play(880, 1000);             // Play sound at 880Hz for 1 second
-  
+  Sound_Play(800, 1000);
+
   i=0;
   while(1){
     if(!BUTTON){
-      
       switch(i){
-        case 0: Tone1(); break;
-        case 1: Tone2(); break;
-        case 2: Tone3(); break;
-        case 3: Melody(); break;
-        case 4: ToneA(); break;
-        case 5: ToneC(); break;
-        case 6: ToneE(); break;
+        case 0: Tone1();   break;
+        case 1: Tone2();   break;
+        case 2: Tone3();   break;
+        case 3: Melody();  break;
+        case 4: ToneA();   break;
+        case 5: ToneC();   break;
+        case 6: ToneE();   break;
         case 7: Melody2(); break;
-        default: Sound_Play(100, 1000);  break;
+        default: 
+          i=0;
+          Sound_Play(800, 250);
+          Sound_Play(400, 250);
+          Sound_Play(800, 250);
+          Sound_Play(400, 250);
+          Sound_Play(800, 250);
+          Sound_Play(400, 250);
+          Sound_Play(800, 250);
+          Sound_Play(400, 250);
+          break;
       }
-
-      if(i<7) i++;
-      else i=0;
+      i++;
       wait(100);
       while(!BUTTON);
     }

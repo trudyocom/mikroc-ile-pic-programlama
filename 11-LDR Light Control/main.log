@@ -1,0 +1,12 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4550 -DL -O11111114 -fo48 -N"C:\Users\ueminiscan\Documents\GitHub\mikroc-ile-pic-programlama\11-LDR Light Control\main.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\ueminiscan\Documents\GitHub\mikroc-ile-pic-programlama\11-LDR Light Control\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" "main.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl" "__Lib_Conversions.mcl" "__Lib_Sound.mcl" "__Lib_ADC_A_D.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 2027 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	main.c
+diagnostics: 29	123	Compiled Successfully	main.c
+hint: 10	1164	Variable 'temp' has been eliminated by optimizer	main.c
+diagnostics: 0	127	All files Compiled in 172 ms	 
+hint: 0	1144	Used RAM (bytes): 4 (1%)  Free RAM (bytes): 2023 (99%)	Used RAM (bytes): 4 (1%)  Free RAM (bytes): 2023 (99%)
+hint: 0	1144	Used ROM (bytes): 1027 (3%)  Free ROM (bytes): 31741 (97%)	Used ROM (bytes): 1027 (3%)  Free ROM (bytes): 31741 (97%)
+diagnostics: 0	125	Project Linked Successfully	main.mcppi
+diagnostics: 0	128	Linked in 78 ms	 
+diagnostics: 0	129	Project 'main.mcppi' completed: 422 ms	 
+diagnostics: 0	103	Finished successfully: 27 Apr 2021, 02:25:56	main.mcppi

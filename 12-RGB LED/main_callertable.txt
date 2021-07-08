@@ -1,0 +1,7 @@
+main
+	__CC2DW
+	InitTimer0
+	InitTimer1
+	AnimateRGB
+		wait
+Interrupt

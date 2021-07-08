@@ -47,7 +47,8 @@ Count=1
 VECTOR_MODE=0
 IVT_BASE=00000008
 [EXPANDED_NODES]
-Count=0
+0=main.mcppi
+Count=1
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries

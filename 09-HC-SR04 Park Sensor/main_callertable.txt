@@ -1,0 +1,15 @@
+main
+	getDistance
+		byte2double
+			NRM4032
+				SETFUN32
+				FIXSIGN32
+				SETFOV32
+				RES032
+		Mul_32x32_FP
+			RES032
+			SETFOV32
+			SETFUN32
+		double2word
+			SETIOV3224
+	wait
